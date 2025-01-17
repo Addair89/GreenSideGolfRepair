@@ -55,10 +55,10 @@ const Services = () => {
             Shaft Swaps
           </h3>
           <p className="text-lg font-body font-bold">
-            If a golf club&apos;s shaft breaks, doesn&apos;t match the
-            golfer&apos;s swing style, or needs an upgrade, a shaft swap
-            involves replacing the old shaft with a new one. This ensures the
-            club performs optimally for the golfer&apos;s unique needs.
+            If a golf club&apos;s shaft breaks, does not match the golfer&apos;s
+            swing style, or needs an upgrade, a shaft swap involves replacing
+            the old shaft with a new one. This ensures the club performs
+            optimally for the golfer&apos;s unique needs.
           </p>
           <p
             onClick={scrollToContact}
