@@ -49,6 +49,7 @@ const ContactForm = () => {
       }
     } catch (error) {
       setSubmitStatus("error");
+      console.log(error);
     } finally {
       setIsLoading(false);
     }

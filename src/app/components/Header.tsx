@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 
@@ -9,24 +10,24 @@ const Header = () => {
       <div className="flex items-center justify-between lg:justify-center relative">
         {/* Desktop Menu */}
         <nav className="flex space-x-6 absolute right-4">
-          <a href="/" className="hover:text-gray-400">
+          <Link href="/" className="hover:text-gray-400">
             <FaInstagram className="text-2xl" />
-          </a>
-          <a href="/services" className="hover:text-gray-400">
+          </Link>
+          <Link href="/services" className="hover:text-gray-400">
             <FaFacebook className="text-2xl" />
-          </a>
+          </Link>
         </nav>
 
         {/* Logo */}
         <div className="flex justify-center">
-          <a href="/">
+          <Link href="/">
             <Image
               src="/logopng.png"
               width={225}
               height={100}
               alt="Logo"
             ></Image>
-          </a>
+          </Link>
         </div>
       </div>
     </header>
