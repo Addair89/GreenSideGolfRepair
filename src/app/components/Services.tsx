@@ -148,7 +148,7 @@ const Services = () => {
           <p className="text-lg font-body font-bold">
             A rattling sound in a club can be distracting and indicate loose
             materials inside the shaft. This service identifies and removes the
-            source of the rattle, restoring the club's feel and sound.
+            source of the rattle, restoring the club&apos;s feel and sound.
           </p>
           <p
             onClick={scrollToContact}
