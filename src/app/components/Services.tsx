@@ -1,18 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Services = () => {
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+  }, []);
+
+  const animationConfig = {
+    // For mobile, set the initial state to the final position
+    initial: isMobile ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 },
+    // For mobile, keep it in the final position
+    whileInView: { opacity: 1, x: 0 },
+    // Viewport config can stay the same for both
+    viewport: { once: false, amount: 0.4 },
+    // No transition needed for mobile
+    transition: isMobile ? { duration: 0 } : { duration: 0.6 },
+  };
+
   return (
     <>
       <motion.h2
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: false, amount: 0.4 }}
-        transition={{ duration: 0.6 }}
+        {...animationConfig}
         className="font-body font-bold text-3xl md:text-4xl  mt-20 mb-10 self-start ml-[10%] mr-[10%] bg-gradient-to-r from-green-500 to-green-700 bg-clip-text text-transparent"
       >
         What We Do... Other Than Golf
@@ -22,10 +43,7 @@ const Services = () => {
         <div className="bg-[#2af753] absolute bottom-[0rem] -z-10 left-0 h-[21.25rem] rounded-full blur-[12rem] w-[10.75rem] "></div>
         {/* <div className="bg-[#45e565] absolute top-0 -z-10 right-[41rem] h-[21.25rem] w-[11.25rem] rounded-full blur-[12rem] sm:w-[68.75rem] dark:bg-[#45e565]"></div> */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.4 }}
-          transition={{ duration: 0.6 }}
+          {...animationConfig}
           className="service-card  flex flex-col items-center ease-in-out duration-300 text-black  rounded-lg p-6 space-x-1"
         >
           <h3 className="font-body text-2xl font-bold underline mb-10">
@@ -45,10 +63,7 @@ const Services = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.4 }}
-          transition={{ duration: 0.6 }}
+          {...animationConfig}
           className="service-card   flex flex-col items-center ease-in-out duration-300 text-black  rounded-lg p-6 space-x-1"
         >
           <h3 className="font-body text-2xl font-bold underline mb-10">
@@ -68,10 +83,7 @@ const Services = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.4 }}
-          transition={{ duration: 0.6 }}
+          {...animationConfig}
           className="service-card   flex flex-col items-center ease-in-out duration-300 text-black  rounded-lg p-6 space-x-1"
         >
           <h3 className="font-body text-2xl font-bold underline mb-10">
@@ -90,10 +102,7 @@ const Services = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.4 }}
-          transition={{ duration: 0.6 }}
+          {...animationConfig}
           className="service-card flex flex-col items-center ease-in-out duration-300 text-black  rounded-lg p-6 space-x-1"
         >
           <h3 className="font-body text-2xl font-bold underline mb-10">
@@ -113,10 +122,7 @@ const Services = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.4 }}
-          transition={{ duration: 0.6 }}
+          {...animationConfig}
           className="service-card  flex flex-col items-center ease-in-out duration-300 text-black   rounded-lg p-6 space-x-1"
         >
           <h3 className="font-body text-2xl font-bold underline mb-10">
@@ -136,10 +142,7 @@ const Services = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.4 }}
-          transition={{ duration: 0.6 }}
+          {...animationConfig}
           className="service-card flex flex-col items-center ease-in-out duration-300 text-black  rounded-lg p-6 space-x-1"
         >
           <h3 className="font-body text-2xl font-bold underline mb-10">
