@@ -74,7 +74,7 @@ const ContactForm = () => {
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6 }}
           className="text-3xl mb-10 font-bold md:text-4xl font-body text-white"
         >
@@ -83,7 +83,7 @@ const ContactForm = () => {
         <motion.p
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6 }}
           className="font-body text-xl text-white"
         >
@@ -105,7 +105,7 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: false, amount: 0.4 }}
+        viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.6 }}
         className="md:col-span-2 flex justify-center items-center flex-col md:grid gap-5 md:grid-cols-2 bg-white/20 rounded-lg shadow-md p-5 md:p-10"
       >
